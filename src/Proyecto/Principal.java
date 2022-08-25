@@ -18,7 +18,7 @@ public class Principal {
    //PARA RELLENAR LOS DATOS
         public static void insertarDatosAeropuerto(Aeropuerto aero[]){
             //AEROPUERTO 1 PUBLICO
-            aero[0] = new AeropuertoInternacional(80000000, "Jorge Chavez", "Lima", "Peru"); //Primero se crea un aeropuerto
+            aero[0] = new AeropuertoInternacional(80000000, "El edén", "Armenia", "Colombia"); //Primero se crea un aeropuerto
             aero[0].insertarCompañia(new Compañia("AeroPeru")); //se insertan las compañías
             aero[0].insertarCompañia(new Compañia("LATAM")); //se insertan las compañías
             aero[0].getCompañia("AeroPeru").insertarVuelo(new Vuelo("IB20","Lima", "Mexico", 150.90, 150)); //obtener cada compañia e insertar los vuelos
