@@ -9,9 +9,9 @@ public class Pasajero {
     private String pasaporte;
     private String nacionalidad;
     private int edad;
-    private int genero;
+    private String genero;
 
-    public Pasajero(String nombre, String pasaporte, String nacionalidad, int edad, int genero) {
+    public Pasajero(String nombre, String pasaporte, String nacionalidad, int edad, String genero) {
         this.nombre = nombre;
         this.pasaporte = pasaporte;
         this.nacionalidad = nacionalidad;
@@ -51,11 +51,11 @@ public class Pasajero {
         this.edad = edad;
     }
 
-    public int getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(int genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 

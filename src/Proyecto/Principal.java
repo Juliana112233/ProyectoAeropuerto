@@ -18,38 +18,79 @@ public class Principal {
    //PARA RELLENAR LOS DATOS
         public static void insertarDatosAeropuerto(Aeropuerto aero[]){
             //AEROPUERTO 1 PUBLICO
-            aero[0] = new AeropuertoInternacional(80000000, "El edén", "Armenia", "Colombia"); //Primero se crea un aeropuerto
-            aero[0].insertarCompañia(new Compañia("AeroPeru")); //se insertan las compañías
-            aero[0].insertarCompañia(new Compañia("LATAM")); //se insertan las compañías
-            aero[0].getCompañia("AeroPeru").insertarVuelo(new Vuelo("IB20","Lima", "Mexico", 150.90, 150)); //obtener cada compañia e insertar los vuelos
-            aero[0].getCompañia("AeroPeru").insertarVuelo(new Vuelo("IB21","Lima", "Buenos Aires", 180.99, 120));
-            aero[0].getCompañia("LATAM").insertarVuelo(new Vuelo("FC12","Lima", "Londres", 500.90, 180));
-            aero[0].getCompañia("AeroPeru").getVuelo("IB20").insertarPasajero(new Pasajero("Alejandro", "20BGHP", "Peruana"));//luego obtener la compañia, obtener el vuelo e insertar el pasajero
-            aero[0].getCompañia("AeroPeru").getVuelo("IB20").insertarPasajero(new Pasajero("Maria", "PJKL20", "Mexicana"));
-            aero[0].getCompañia("LATAM").getVuelo("FC12").insertarPasajero(new Pasajero("Raul", "JH21KL", "Peruana"));
+            aero[0] = new AeropuertoInternacional(1, "El Eden", "Armenia", "Colombia"); //Primero se crea un aeropuerto
+            aero[0].insertarCompañia(new Compañia("AVIANCA")); //se insertan las compañías
+            aero[0].insertarCompañia(new Compañia("EASYFLY")); //se insertan las compañías
+            aero[0].insertarCompañia(new Compañia("SPIRIT AIRLINES"));
+            aero[0].insertarCompañia(new Compañia("LATAM"));
+            aero[0].insertarCompañia(new Compañia("VIVA AIR"));
+            aero[0].insertarCompañia(new Compañia("WINGO(Próximamente en oct-2022)"));
+            aero[0].getCompañia("AVIANCA").insertarVuelo(new Vuelo("AV01","Armenia", "Bogota", 150.90)); //obtener cada compañia e insertar los vuelos
+            aero[0].getCompañia("EASYFLY").insertarVuelo(new Vuelo("EF01","Armenia", "Bogota", 180.99));
+            aero[0].getCompañia("EASYFLY").insertarVuelo(new Vuelo("EF02", "Armenia", "Medellin", 300.0));
+            aero[0].getCompañia("SPIRIT AIRLINES").insertarVuelo(new Vuelo("SA01","Armenia", "Fort Lauderdale", 500.90));
+            aero[0].getCompañia("LATAM").insertarVuelo(new Vuelo("LA01","Armenia", "Bogotá", 500.90));
+            aero[0].getCompañia("AVIANCA").getVuelo("AV01").insertarPasajero(new Pasajero("Alejandro", "PER1BP", "Peruana", 22, "Hombre"));//luego obtener la compañia, obtener el vuelo e insertar el pasajero
+            aero[0].getCompañia("EASYFLY").getVuelo("EF01").insertarPasajero(new Pasajero("Camila", "EC2IOT", "Ecuatoriana", 13, "Mujer"));
+            aero[0].getCompañia("EASYFLY").getVuelo("EF02").insertarPasajero(new Pasajero("Adele", "BR3YEG", "Británica", 30, "Mujer"));
+            aero[0].getCompañia("SPIRIT AIRLINES").getVuelo("SA01").insertarPasajero(new Pasajero("Carl", "US4GIE", "Estadounidense", 30, "Hombre"));
+            aero[0].getCompañia("LATAM").getVuelo("LA01").insertarPasajero(new Pasajero("Juan", "CO5QRU", "Colombiana", 23, "Hombre"));
+ 
+            //AEROPUERTO NACIONAL LA NUBIA
             
-            //AEROPUERTO 2 PRIVADO
-            aero[1] = new AeropuertoNacional("Central ciudad Real", "Ciudad Real", "España");
-            aero[1].insertarCompañia(new Compañia("AirEuropa"));
-            String empresas[] = {"Cobresol","Anguila34"};
+            aero[1] = new AeropuertoNacional("La Nubia", "Manizales", "Colombia");
+            String empresas[] = {"Inficaldas"};
             ((AeropuertoNacional)aero[1]).insertarEmpresas(empresas);
-            aero[1].getCompañia("AirEuropa").insertarVuelo(new Vuelo("AF025", "Madrid", "Buenos aires", 1000.99, 30));
-            aero[1].getCompañia("AirEuropa").getVuelo("AF025").insertarPasajero(new Pasajero("David", "56784", "Español"));
+            aero[1].insertarCompañia(new Compañia("EASYFLY"));
+            aero[1].getCompañia("EASYFLY").insertarVuelo(new Vuelo("EF03", "Manizales", "Bogotá", 1000.99));
+            aero[1].getCompañia("EASYFLY").insertarVuelo(new Vuelo("EF04", "Manizales", "Cartagena", 1000.99));
+            aero[1].getCompañia("EASYFLY").insertarVuelo(new Vuelo("EF05", "Manizales", "Medellín", 1000.99));
+            aero[1].getCompañia("EASYFLY").getVuelo("EF03").insertarPasajero(new Pasajero("David", "ES623", "Español", 45, "Hombre"));
+            aero[1].getCompañia("EASYFLY").getVuelo("EF04").insertarPasajero(new Pasajero("Marta", "CO7IRG", "Colombiana", 37, "Mujer"));
+            aero[1].getCompañia("EASYFLY").getVuelo("EF05").insertarPasajero(new Pasajero("Pablo", "AR8UEH", "Argentino", 60, "Hombre"));
             
            
-            aero[2] = new AeropuertoInternacional(5000000, "El Dorado", "Bogotá", "Colombia");
-            aero[2].insertarCompañia(new Compañia("Avianca"));
-            aero[2].insertarCompañia(new Compañia("VivaAir"));
-            aero[2].getCompañia("Avianca").insertarVuelo(new Vuelo("A001", "Bogotá", "Paris", 1000.0, 50));
-            aero[2].getCompañia("Avianca").insertarVuelo(new Vuelo("A0002", "Bogotá", "Londres", 899.99, 45));
-            aero[2].getCompañia("VivaAir").insertarVuelo(new Vuelo("V001", "Bogotá", "Roma", 999.99, 38));
-            aero[2].getCompañia("VivaAir").insertarVuelo(new Vuelo("V002", "Bogotá", "Paris", 1250.99, 35));
-            aero[2].getCompañia("Avianca").getVuelo("A001").insertarPasajero(new Pasajero("Juliana", "12345", "Colombiana"));
-            aero[2].getCompañia("VivaAir").getVuelo("V001").insertarPasajero(new Pasajero("Juan", "34567", "Mexicana"));
-            aero[2].getCompañia("Avianca").getVuelo("A001").insertarPasajero(new Pasajero("Victoria", "78901", "Argentina"));
-            aero[2].getCompañia("VivaAir").getVuelo("V001").insertarPasajero(new Pasajero("Juan", "98765", "Uruguaya"));
-            aero[2].getCompañia("Avianca").getVuelo("A001").insertarPasajero(new Pasajero("Karen", "4321", "Chilena"));
-            aero[2].getCompañia("VivaAir").getVuelo("V001").insertarPasajero(new Pasajero("Marco", "11111", "Brasileño"));
+            aero[2] = new AeropuertoInternacional(2, "Matecania", "Pereira", "Colombia");
+            aero[2].insertarCompañia(new Compañia("AMERICAN AIRLINES"));
+            aero[2].insertarCompañia(new Compañia("COPA AIRLINES"));
+            aero[2].insertarCompañia(new Compañia("AVIANCA"));
+            aero[2].insertarCompañia(new Compañia("LATAM"));
+            aero[2].insertarCompañia(new Compañia("VIVA AIR"));
+            aero[2].insertarCompañia(new Compañia("EASYFLY"));
+            aero[2].insertarCompañia(new Compañia("ULTRA AIR"));
+            aero[2].insertarCompañia(new Compañia("GCA AIRLINES"));
+            aero[2].getCompañia("AMERICAN AIRLINES").insertarVuelo(new Vuelo("AA01", "Pereira", "Miami", 1000.0));
+            aero[2].getCompañia("COPA AIRLINES").insertarVuelo(new Vuelo("CA01", "Pereira", "Panamá", 899.99));
+            aero[2].getCompañia("AVIANCA").insertarVuelo(new Vuelo("AV02", "Pereira", "Bogotá", 999.99));
+            aero[2].getCompañia("AVIANCA").insertarVuelo(new Vuelo("AV03", "Pereira", "Cartagena", 1250.99));
+            aero[2].getCompañia("AVIANCA").insertarVuelo(new Vuelo("AV04", "Pereira", "Santa Marta", 1000.0));
+            aero[2].getCompañia("LATAM").insertarVuelo(new Vuelo("LA02", "Pereira", "Bogotá", 899.99));
+            aero[2].getCompañia("LATAM").insertarVuelo(new Vuelo("LA03", "Pereira", "Cartagena", 999.99));
+            aero[2].getCompañia("LATAM").insertarVuelo(new Vuelo("LA04", "Pereira", "Medellín", 1250.99));
+            aero[2].getCompañia("VIVA AIR").insertarVuelo(new Vuelo("A0002", "Pereira", "Bogotá", 899.99));
+            aero[2].getCompañia("VIVA AIR").insertarVuelo(new Vuelo("V001", "Pereira", "Cartagena", 999.99));
+            aero[2].getCompañia("VIVA AIR").insertarVuelo(new Vuelo("V002", "Pereira", "Medellín", 1250.99));
+            aero[2].getCompañia("VIVA AIR").insertarVuelo(new Vuelo("A0002", "Pereira", "Santa Marta", 899.99));
+            aero[2].getCompañia("VIVA AIR").insertarVuelo(new Vuelo("V001", "Pereira", "San Andrés", 999.99));
+            aero[2].getCompañia("EASYFLY").insertarVuelo(new Vuelo("EF06", "Pereira", "Bogotá", 1250.99));
+            aero[2].getCompañia("EASYFLY").insertarVuelo(new Vuelo("V002", "Pereira", "Medellín", 1250.99));
+            aero[2].getCompañia("EASYFLY").insertarVuelo(new Vuelo("V002", "Pereira", "Medellín", 1250.99));
+            aero[2].getCompañia("EASYFLY").insertarVuelo(new Vuelo("V002", "Pereira", "Villavicencio", 1250.99));
+            aero[2].getCompañia("ULTRA AIR").insertarVuelo(new Vuelo("V002", "Pereira", "Cartagena", 1250.99));
+            aero[2].getCompañia("ULTRA AIR").insertarVuelo(new Vuelo("V002", "Pereira", "San Andrés", 1250.99));
+            aero[2].getCompañia("GCA AIRLINES").insertarVuelo(new Vuelo("V002", "Pereira", "San Andrés", 1250.99));
+            aero[2].getCompañia("AMERICAN AIRLINES").getVuelo("AA01").insertarPasajero(new Pasajero("Marcus", "BS1RIH", "Brasileña", 31, "Hombre"));
+            aero[2].getCompañia("COPA AIRLINES").getVuelo("CA01").insertarPasajero(new Pasajero("Sara", "CO1EUF", "Colombiana", 10, "Mujer"));
+            aero[2].getCompañia("AVIANCA").getVuelo("AV02").insertarPasajero(new Pasajero("Penélope", "CA1YFY", "Canadiense", 20, "Mujer"));
+            aero[2].getCompañia("AVIANCA").getVuelo("AV03").insertarPasajero(new Pasajero("Sebastián", "CO1UTY", "Colombiana", 29, "Hombre"));
+            aero[2].getCompañia("AVIANCA").getVuelo("AV04").insertarPasajero(new Pasajero("Valentina", "CO1HGT", "Colombiana", 19, "Mujer"));
+            aero[2].getCompañia("AVIANCA").getVuelo("AV02").insertarPasajero(new Pasajero("Andrés", "CO1FGR", "Colombiana", 23, "Hombre"));
+            
+            
+            
+            
+            
+            
             
         }
         public static void menu(){
@@ -60,17 +101,17 @@ public class Principal {
             
             do{
                 System.out.println("\t.:MENU:.");
-                System.out.println("1. Ver Aeropuertos gestionados");
-                System.out.println("2. Ver empresas (Privado) o Subvención (Público)");
-                System.out.println("3. Lista de Compañias de un Aeropuerto");
-                System.out.println("4. Lista de vuelos por Compañia");
-                System.out.println("5. Listar posibles vuelos de origen a Destino");
+                System.out.println("1. Ver Aeropuertos Nacionales e Internacionales del Eje Cafetero en Colombia");
+                System.out.println("2. Ver número de destinos Internacionales (Aeropuerto Internacional) o Entidades financiadoras (Aeropuerto Nacional)");
+                System.out.println("3. Lista de aerolíneas del Aeropuerto Elegido");
+                System.out.println("4. Lista de vuelos que ofrecen las aerolíneas");
+                System.out.println("5. Consultar vuelos de acuerdo al Origen y destino");
                 System.out.println("6. Salir");
                 System.out.println("Opcion: ");
                 opcion = entrada.nextInt();
                 
                 switch(opcion){
-                    case 1: //Ver aeropuertos gestionados (publicos o privados)
+                    case 1: //Ver aeropuertos gestionados Nacion1ales e Internacionales
                         System.out.println(""); //para separar del menu
                         mostrarDatosAeropuertos(aeropuertos);
                         break;
@@ -117,21 +158,21 @@ public class Principal {
                         break;
                     case 6:
                         break;
-                    default: System.out.println("Se equivocó de opción de menú");             
+                    default: System.out.println("La opción de menú que digitó no existe");             
                 }
             }while(opcion!=6);
         }
             public static void mostrarDatosAeropuertos(Aeropuerto aeropuertos[]){
                 for (int i = 0; i < aeropuertos.length; i++) {
                     if (aeropuertos[i] instanceof AeropuertoNacional) {
-                        System.out.println("Aeropuerto Privado");
+                        System.out.println("Aeropuerto Nacional");
                         System.out.println("Nombre: "+aeropuertos[i].getNombre());
                         System.out.println("Ciudad: "+aeropuertos[i].getCiudad());
                         System.out.println("Pais: "+aeropuertos[i].getPais());
                         
                     }
                     else{
-                         System.out.println("Aeropuerto Publico");
+                         System.out.println("Aeropuerto Internacional");
                         System.out.println("Nombre: "+aeropuertos[i].getNombre());
                         System.out.println("Ciudad: "+aeropuertos[i].getCiudad());
                         System.out.println("Pais: "+aeropuertos[i].getPais());
@@ -144,15 +185,15 @@ public class Principal {
                 String empresas[];
                 for (int i = 0; i <aeropuertos.length; i++) {
                     if (aeropuertos[i] instanceof AeropuertoNacional){
-                    System.out.println("Aeropuerto Privado: "+aeropuertos[i].getNombre());
+                    System.out.println("Aeropuerto Nacional: "+aeropuertos[i].getNombre());
                     empresas = ((AeropuertoNacional)aeropuertos[i]).getListaEmpresas(); // hacer downcasting para acceder a lo de aeropuerto privado
                         for (int j = 0; j < empresas.length; j++) {
                             System.out.println(empresas[j]);
                         }
                 }
                     else{
-                        System.out.println("Aeropuerto Publico: "+aeropuertos[i].getNombre());
-                        System.out.println("Subvencion: "+((AeropuertoInternacional)aeropuertos[i]).getSubvencion());
+                        System.out.println("Aeropuerto Internacional: "+aeropuertos[i].getNombre());
+                        System.out.println("Numero de destinos internacionales: "+((AeropuertoInternacional)aeropuertos[i]).getnumeroDestinosInternacionales());
                     }
                     System.out.println("");
                 }
@@ -186,7 +227,7 @@ public class Principal {
                 for (int i = 0; i < compañia.getNumVuelo(); i++) {
                     vuelo = compañia.getVuelo(i);
                     System.out.println("Identificador: "+vuelo.getIdentificador());
-                    System.out.println("Ciudad de Origen: "+vuelo.getCiudadDestino());
+                    System.out.println("Ciudad de Origen: "+vuelo.getCiudadOrigen());
                     System.out.println("Ciudad de Destino "+vuelo.getCiudadDestino());
                     System.out.println("Precio: $"+vuelo.getPrecio());
                     System.out.println("");           

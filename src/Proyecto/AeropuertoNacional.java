@@ -6,14 +6,14 @@ package Proyecto;
 
 
 public class AeropuertoNacional extends Aeropuerto {
-    private String listaEmpresas[] = new String[10];
+    private String listaEmpresas[] = new String[1];
     private int numEmpresa;
 
-    public AeropuertoPrivado(String nombre, String ciudad, String pais) {
+    public AeropuertoNacional(String nombre, String ciudad, String pais) {
         super(nombre, ciudad, pais);
     }
 
-    public AeropuertoPrivado(String nombre, String ciudad, String pais, Compañia[] c, String e[]) {
+    public AeropuertoNacional(String nombre, String ciudad, String pais, Compañia[] c, String e[]) {
         super(nombre, ciudad, pais, c);
         this.listaEmpresas = e;
         numEmpresa = e.length;
